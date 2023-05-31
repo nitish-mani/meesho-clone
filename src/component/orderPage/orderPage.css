@@ -1,0 +1,9 @@
+.orderPage {
+  text-align: center;
+}
+.orderPage > h1 {
+  color: chartreuse;
+}
+.orderPage > h3 {
+  color: darkmagenta;
+}

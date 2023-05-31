@@ -1,0 +1,45 @@
+.detailCard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.detailImg {
+  width: 45%;
+  /* border: 2px solid red; */
+}
+.detailImg img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+.detailImg .button {
+  padding: 12px 60px;
+
+  display: block;
+  margin: auto;
+  border: none;
+  /* border-radius: 10px; */
+  color: #fff;
+  background-color: #f783ac;
+}
+
+.detailData {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.detailData h3 {
+  color: rgb(61, 120, 120);
+}
+.detailData .rating {
+  display: flex;
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #37b24d;
+  border-radius: 100px;
+
+  align-items: center;
+}

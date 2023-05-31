@@ -1,0 +1,17 @@
+.bank {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 2px 2px 15px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-inline: 20px;
+}
+.bank h3,
+input {
+  grid-column-start: span 2;
+}
+.bank input {
+  border: 2px solid rgb(104, 98, 98);
+  padding: 5px 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,43 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 23rem;
+  /* border: 2px solid black; */
+  background-color: #f8f9fa;
+  box-shadow: 0px 15px 20px -5px rgb(0 0 0 /15%);
+  margin-inline: auto;
+  margin-top: 20vh;
+  padding: 25px 40px;
+  gap: 10px;
+}
+.form label {
+  grid-column-start: span 2;
+  text-align: center;
+}
+.form input {
+  grid-column-start: span 2;
+  border: 1px solid rgb(0 0 0 / 30%);
+  height: 30px;
+  padding-left: 10px;
+  color: #777;
+}
+.form input:focus {
+  outline: none;
+  border: 2px solid #f06595;
+}
+.log {
+  grid-column-start: 2;
+  background-color: #be4bdb;
+  font-weight: bold;
+  border: none;
+  color: aliceblue;
+  height: 30px;
+}
+.res {
+  grid-column-start: span 2;
+  background-color: #f06595;
+  font-weight: bold;
+  border: none;
+  color: aliceblue;
+  height: 30px;
+}
