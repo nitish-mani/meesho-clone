@@ -1,4 +1,4 @@
-.nav-bar2 {
+.NavBar2 {
   display: flex;
   justify-content: space-evenly;
   width: 80vw;
@@ -9,16 +9,16 @@
   margin-bottom: 1em;
 }
 @media screen and (max-width: 720px) {
-  .nav-bar2 {
+  .NavBar2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
   }
 }
-@media screen and (max-width:300px) {
-  .nav-bar2 {
+@media screen and (max-width: 300px) {
+  .NavBar2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
 }

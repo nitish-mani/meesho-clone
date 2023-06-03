@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import "./nav-bar2.css";
+import "./NavBar2.css";
 
 export default function NavBar2() {
   return (
     <>
-      <div className="nav-bar2">
+      <div className="NavBar2">
         <div>View All</div>
         <div>Women Western</div>
         <div>Jewellery & Accessories</div>

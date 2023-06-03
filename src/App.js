@@ -1,7 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import Nav_bar1 from "./component/nav_bar1/nav_bar.component";
-import NavBar2 from "./component/nav-bar2/nav-bar2.component";
+import NavBar1 from "./component/NavBar1/NavBar.component";
+import NavBar2 from "./component/NavBar2/NavBar2";
 
 import Home from "./component/home/home";
 import axios from "axios";
@@ -29,7 +29,7 @@ function App() {
       path: "/",
       element: (
         <>
-          <Nav_bar1
+          <NavBar1
             cartD={cartD}
             userAuth={userAuth}
             userAuthHandler={(d) => setUserAuth(d)}
