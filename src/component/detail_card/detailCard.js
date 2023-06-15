@@ -3,7 +3,7 @@ import dataApi from "../../context/dataApi";
 import { useNavigate, useParams } from "react-router-dom";
 import "./detailCard.css";
 import StarIcon from "@mui/icons-material/Star";
-import CartContext from "../../context/authContext";
+// import CartContext from "../../context/authContext";
 
 export default function DetailCard({ update }) {
   const { id } = useParams();

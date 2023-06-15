@@ -17,25 +17,26 @@ import Payment from "./component/payment/payment";
 import Bank from "./component/bank/bank";
 import Ccard from "./component/ccard/ccard";
 import { logInWithEmailAndPassword } from "./component/firebase/firebase";
+import Search from "./search/search";
 function App() {
   const [data, setData] = useState([]);
   // const cart = useContext(cartContext);
   const [cartD, setCartD] = useState([]);
   const [userAuth, setUserAuth] = useState({});
+  const [sd, setSD] = useState("");
   // const navigate = useNavigate();
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        <>
-          <NavBar1
-            cartD={cartD}
-            userAuth={userAuth}
-            userAuthHandler={(d) => setUserAuth(d)}
-          />
-          <NavBar2 />
-        </>
+        <NavBar1
+          cartD={cartD}
+          userAuth={userAuth}
+          data={data}
+          userAuthHandler={(d) => setUserAuth(d)}
+          setSD={setSD}
+        />
       ),
       children: [
         {
@@ -83,10 +84,17 @@ function App() {
           path: "ccard",
           element: <Ccard cartD={cartD} setCartD={setCartD} />,
         },
+        {
+          path: "search",
+          element: <Search data={data} sd={sd} />,
+        },
       ],
     },
   ]);
 
+  function search(e) {
+    setSD(e);
+  }
   // console.log(cartData);
   function remove(id) {
     const newCartD = cartD.filter((item) => {

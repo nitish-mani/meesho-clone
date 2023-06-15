@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./orderPage.css";
 
 export default function OrderPage() {
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
   return (
     <div className="orderPage">
       <h1>Payment Successful</h1>

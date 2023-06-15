@@ -17,7 +17,7 @@ export default function NavBar2() {
         <div>Electronics</div>
       </div>
       <hr />
-      <Outlet></Outlet>
+      {/* <Outlet></Outlet> */}
     </>
   );
 }

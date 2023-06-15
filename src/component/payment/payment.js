@@ -1,16 +1,16 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./payment.css";
 import { useState } from "react";
 
 export default function Payment() {
   const navigate = useNavigate();
-  const [bgcolor, setBgcolor] = useState("");
+  // const [bgcolor, setBgcolor] = useState("");
   const [netbank, setNetbank] = useState("");
   const [card, setCard] = useState("");
 
-  function setcolor() {
-    setBgcolor("#b2f2bb");
-  }
+  // function setcolor() {
+  //   setBgcolor("#b2f2bb");
+  // }
   return (
     <>
       <div className="payment">
@@ -61,7 +61,6 @@ export default function Payment() {
           className="procede"
           onClick={() => {
             netbank ? navigate("/bank") : navigate("/ccard");
-            setcolor();
           }}
         >
           {netbank || card ? "Make Payment" : "Proceed"}

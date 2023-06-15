@@ -44,9 +44,7 @@ export default function Ccard({ setCartD, cartD }) {
         onClick={() => {
           if (cardNumber && expiry && cvv) {
             navigate("/order");
-            cartD.map((i) => {
-              localStorage.removeItem(i.id);
-            });
+            cartD.map((i) => localStorage.removeItem(i.id));
             // console.log(cartD);
             setCartD("");
           } else alert("Input Details");

@@ -3,13 +3,27 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import StayCurrentPortraitOutlinedIcon from "@mui/icons-material/StayCurrentPortraitOutlined";
 import SearchIcon from "@mui/icons-material/Search";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import cartContext from "../../context/authContext";
-import { useContext, useState } from "react";
-export default function NavBar1({ cartD, userAuth, userAuthHandler }) {
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+// import cartContext from "../../context/authContext";
+// import { useContext, useState } from "react";
+export default function NavBar1({
+  cartD,
+  data,
+  userAuth,
+  userAuthHandler,
+  setSD,
+}) {
   const navigate = useNavigate();
-  const cartData = useContext(cartContext);
-  const [crtData, setcrtData] = useState(null);
+  // const cartData = useContext(cartContext);
+  // const [crtData, setcrtData] = useState(null);
+  // const [searchQuery, setSearchQuery] = useState("");
+
+  function search(e) {
+    data.filter((item) => item.title.toLowerCase() === e.toLowerCase());
+  }
+
   return (
     <>
       <div className="NavBar">
@@ -25,7 +39,14 @@ export default function NavBar1({ cartD, userAuth, userAuthHandler }) {
             <div className="placeholder">
               <SearchIcon sx={{ color: "#aaa" }} />
             </div>
-            <input type="text" placeholder="Search" />
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={(e) => {
+                setSD(e.target.value);
+                navigate("/search");
+              }}
+            />
           </div>
         </div>
         <div className="par-2">
@@ -75,7 +96,7 @@ export default function NavBar1({ cartD, userAuth, userAuthHandler }) {
         </div>
       </div>
       <hr />
-      {/* <Outlet></Outlet> */}
+      <Outlet></Outlet>
     </>
   );
 }

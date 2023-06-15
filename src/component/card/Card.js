@@ -6,7 +6,7 @@ export default function Card({ item }) {
     <>
       <div onClick={() => {}} className="card">
         <div className="img-container">
-          <img src={item.image} />
+          <img src={item.image} alt="" />
         </div>
         <h3>{item.title}</h3>
         <h2>Rs.{item.price}</h2>
