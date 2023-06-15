@@ -7,7 +7,7 @@ export default function Search({ data, sd }) {
     <>
       <div className="home">
         {data.map((item) => {
-          if (item.title.toLowerCase().includes(sd) && sd !== "") {
+          if (item.title.toLowerCase().includes(sd) || sd !== "") {
             return (
               <div
                 key={item.id}

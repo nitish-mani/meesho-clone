@@ -51,11 +51,23 @@ export default function NavBar1({
         </div>
         <div className="par-2">
           <div className="NavBar-link">
-            <div className="NavBar-child2 brd hover">
+            <div
+              className="NavBar-child2 brd hover"
+              onClick={() => {
+                navigate("/download");
+              }}
+            >
               <StayCurrentPortraitOutlinedIcon />
               Download App
             </div>
-            <div className="NavBar-child2 brd ">Become Supplier</div>
+            <div
+              className="NavBar-child2 brd hover1 "
+              onClick={() => {
+                navigate("/supplier");
+              }}
+            >
+              Become Supplier
+            </div>
             <div
               className="NavBar-child2 hover cart12"
               onClick={() => {
@@ -84,7 +96,7 @@ export default function NavBar1({
               onClick={() => {
                 navigate("/cart");
               }}
-              className="NavBar-child2 cart12"
+              className="NavBar-child2 cart12 hover1"
             >
               <div>
                 <ShoppingCartIcon />

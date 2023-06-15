@@ -58,7 +58,7 @@ export default function Payment() {
         <div className="outlet"></div>
 
         <div
-          className="procede"
+          className="procede hover1"
           onClick={() => {
             netbank ? navigate("/bank") : navigate("/ccard");
           }}

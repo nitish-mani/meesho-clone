@@ -40,7 +40,7 @@ export default function Ccard({ setCartD, cartD }) {
         }}
       />
       <div
-        className="makepay"
+        className="makepay hover1"
         onClick={() => {
           if (cardNumber && expiry && cvv) {
             navigate("/order");

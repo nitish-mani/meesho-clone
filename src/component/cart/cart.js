@@ -44,7 +44,7 @@ export default function Cart({ data, remove, setCartD, userAuth }) {
           Total Product Price : {data.length === 0 ? 0 : total?.toFixed(2)}
         </div>
         <div
-          className="buy-now"
+          className="buy-now hover1"
           onClick={() => {
             if (!data.length) {
               alert("kuchh to kharidiye Maharaj.");

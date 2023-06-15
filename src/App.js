@@ -1,7 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import NavBar1 from "./component/NavBar1/NavBar.component";
-import NavBar2 from "./component/NavBar2/NavBar2";
+// import NavBar2 from "./component/NavBar2/NavBar2";
 
 import Home from "./component/home/home";
 import axios from "axios";
@@ -18,6 +18,8 @@ import Bank from "./component/bank/bank";
 import Ccard from "./component/ccard/ccard";
 import { logInWithEmailAndPassword } from "./component/firebase/firebase";
 import Search from "./search/search";
+import Download from "./download/download";
+import Supplier from "./supplier/supplier";
 function App() {
   const [data, setData] = useState([]);
   // const cart = useContext(cartContext);
@@ -43,6 +45,7 @@ function App() {
           path: "/",
           element: <Home />,
         },
+
         {
           path: "detail/:id",
           element: (
@@ -87,6 +90,14 @@ function App() {
         {
           path: "search",
           element: <Search data={data} sd={sd} />,
+        },
+        {
+          path: "download",
+          element: <Download />,
+        },
+        {
+          path: "supplier",
+          element: <Supplier />,
         },
       ],
     },

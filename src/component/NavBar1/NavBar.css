@@ -106,6 +106,10 @@
 }
 .hover:hover {
   color: rgb(250, 57, 121);
+  cursor: pointer;
+}
+.hover1:hover {
+  cursor: pointer;
 }
 .NavBar-link {
   display: flex;
