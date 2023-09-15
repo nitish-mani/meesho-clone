@@ -47,11 +47,11 @@ export default function Cart({ data, remove, setCartD, userAuth }) {
           className="buy-now hover1"
           onClick={() => {
             if (!data.length) {
-              alert("kuchh to kharidiye Maharaj.");
+              // alert("kuchh to kharidiye Maharaj.");
               return;
             }
             if (!userAuth.email) {
-              alert("Areyy! Login karna bhool gye kya?");
+              // alert("Areyy! Login karna bhool gye kya?");
               navigate("/login");
               return;
             }
