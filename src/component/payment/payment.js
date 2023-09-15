@@ -15,38 +15,16 @@ export default function Payment() {
     <>
       <div className="payment">
         <h1>Payment Page</h1>
-        {/* <div className="bold">Net-Banking</div>
-        <div className="bold">UPI</div> */}
+
         <div className="bold">Cards</div>
-        {/* <select
-          onChange={(e) => {
-            if (!(e.target.value === "Select Bank") && !card)
-              setNetbank(e.target.value);
-            else {
-              setNetbank("");
-              alert("You have selected Cards");
-            }
-          }}
-        >
-          <option>Select Bank</option>
-          <option>SBI</option>
-          <option>CBI</option>
-          <option>HDFC Bank</option>
-          <option>Axis Bank</option>
-          <opt>ICICI Bank</opt>
-        </select>
-        <div className="upi">
-          <div className="phonepay">PhonePay</div>
-          <div className="paytm">Paytm</div>
-          <div className="googlepay">GooglePay</div>
-        </div> */}
+
         <select
           onChange={(e) => {
             if (!(e.target.value === "Select Card") && !netbank)
               setCard(e.target.value);
             else {
               setCard("");
-              alert("You have selected Net-Banking");
+              // alert("You have selected Net-Banking");
               setNetbank("Select Bank");
             }
           }}

@@ -66,7 +66,7 @@ export default function Login({ userAuth, userAuthHandler }) {
               userAuthHandler({ email: res.user.email });
               navigate("/");
             } catch (err) {
-              alert(err.code);
+              console.log(err);
             }
           }}
         >

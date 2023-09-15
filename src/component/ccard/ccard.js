@@ -47,7 +47,7 @@ export default function Ccard({ setCartD, cartD }) {
             cartD.map((i) => localStorage.removeItem(i.id));
             // console.log(cartD);
             setCartD("");
-          } else alert("Input Details");
+          }
         }}
       >
         Make Payment
