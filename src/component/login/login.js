@@ -18,11 +18,12 @@ export default function Login({ userAuth, userAuthHandler }) {
     const res = await logInWithEmailAndPassword(userId, pass)
       .then((userCr) => {
         // console.log(userCr.user);
-        setIsLoggedIn(true);
-        setIsLog1(true);
+
         userAuthHandler({ email: userCr.user.email });
         localStorage.setItem("email", userId);
         localStorage.setItem("pass", pass);
+        setIsLoggedIn(true);
+        setIsLog1(true);
       })
       .catch((err) => {
         // console.log(err);
@@ -41,9 +42,7 @@ export default function Login({ userAuth, userAuthHandler }) {
     }, 3000);
   }, [isLog1]);
 
-  // if (userAuth) {
-  //   return navigate("/");
-  // }
+  // console.log(isLoggedIn);
   return (
     <>
       {isLoggedIn ? (
@@ -104,13 +103,7 @@ export default function Login({ userAuth, userAuthHandler }) {
             setPass(e.target.value);
           }}
         />
-        <button
-          className="res"
-          onClick={() => {
-            fnl();
-            // setIsLog(true);
-          }}
-        >
+        <button className="res" onClick={() => fnl()}>
           Login
         </button>
         {/* <button

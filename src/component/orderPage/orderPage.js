@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./orderPage.css";
 
-console.log(new Date().getMilliseconds());
+// console.log(new Date().getMilliseconds());
 
 export default function OrderPage() {
   // const [isVisible, setIsVisible] = useState(true);
