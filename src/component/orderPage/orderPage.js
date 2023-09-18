@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import { useEffect, useRef, useState } from "react";
 import "./orderPage.css";
+import { useNavigate } from "react-router-dom";
 
 // console.log(new Date().getMilliseconds());
 
@@ -19,6 +20,8 @@ export default function OrderPage() {
     }, 5000);
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <div className="orderPage">
       {successful ? (
@@ -31,6 +34,28 @@ export default function OrderPage() {
           <h3>
             Order will be Delivered on {`${date + 3} / ${month} / ${year} .`}
           </h3>
+          <div
+            style={{
+              width: "150px",
+              height: "30px",
+              borderRadius: "5px",
+              backgroundColor: "black",
+              color: "white",
+              padding: "2px",
+              fontWeight: "bold",
+              marginLeft: "auto",
+              marginRight: "auto",
+              textAlign: "center",
+              marginTop: "100px",
+              cursor: "pointer",
+              transition: "3s",
+            }}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Go to Home Page
+          </div>
         </>
       )}
     </div>
