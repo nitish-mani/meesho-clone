@@ -6,12 +6,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDWtNrdXnsbwYKD3iAlUvFHPoypuZlCA3c",
   authDomain: "meesho-cbd2d.firebaseapp.com",
@@ -30,8 +25,7 @@ const logInWithEmailAndPassword = async (email, password) => {
   try {
     return await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
-    console.error(err);
-    // alert(err.message);
+    console.log(err);
   }
 };
 const registerWithEmailAndPassword = async (email, password) => {
@@ -39,8 +33,8 @@ const registerWithEmailAndPassword = async (email, password) => {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     return res;
   } catch (err) {
-    console.error(err);
-    return err;
+    console.log(err);
+    // return err;
   }
 };
 

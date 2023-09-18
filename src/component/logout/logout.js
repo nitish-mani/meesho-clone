@@ -7,6 +7,7 @@ export default function LogOut({ setLoginState }) {
       <button
         onClick={() => {
           navigate("/");
+          // setLoginState("");
         }}
       >
         logOut

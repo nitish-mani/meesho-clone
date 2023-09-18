@@ -20,6 +20,7 @@ import { logInWithEmailAndPassword } from "./component/firebase/firebase";
 import Search from "./search/search";
 import Download from "./download/download";
 import Supplier from "./supplier/supplier";
+import SignUp from "./component/signup/signup";
 function App() {
   const [data, setData] = useState([]);
   // const cart = useContext(cartContext);
@@ -72,7 +73,16 @@ function App() {
         {
           path: "login",
           element: (
-            <Login userAuthHandler={(authDetail) => setUserAuth(authDetail)} />
+            <Login
+              userAuth={userAuth}
+              userAuthHandler={(authDetail) => setUserAuth(authDetail)}
+            />
+          ),
+        },
+        {
+          path: "signup",
+          element: (
+            <SignUp userAuthHandler={(authDetail) => setUserAuth(authDetail)} />
           ),
         },
         {

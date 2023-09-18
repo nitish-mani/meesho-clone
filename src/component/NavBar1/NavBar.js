@@ -84,6 +84,7 @@ export default function NavBar1({
                 <button
                   onClick={() => {
                     userAuthHandler({});
+                    // localStorage.clear();
                   }}
                 >
                   LogOut
