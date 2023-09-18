@@ -14,10 +14,12 @@ export default function DetailCard({ update }) {
   const Navigate = useNavigate();
   useEffect(() => {
     setData1(data.find((item) => item.id === Number(id)));
+  }, [id, data]);
+  useEffect(() => {
     setTimeout(() => {
       setAdded(false);
     }, 3000);
-  }, [id, data]);
+  }, [localStorage.getItem(id)]);
 
   return (
     <>
